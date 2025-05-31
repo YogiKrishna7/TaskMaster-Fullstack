@@ -1,8 +1,9 @@
 function SearchBar({ search }) {
-  const handleSearch = (value) => {
+  const handleSearch = () => {
     const searchValue = document
       .getElementById("searchBar")
-      .value.toLowerCase();
+      .value.trim()
+      .toLowerCase();
     search(searchValue);
   };
 
@@ -13,11 +14,8 @@ function SearchBar({ search }) {
         placeholder="Search Task"
         className="search-input"
         id="searchBar"
-        onKeyUp={() => handleSearch()}
+        onKeyUp={handleSearch}
       />
-      {/* <button className="search-button" onClick={() => handleSearch()}>
-        Search
-      </button> */}
     </div>
   );
 }
