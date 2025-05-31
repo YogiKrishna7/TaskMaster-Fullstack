@@ -1,0 +1,39 @@
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+.vite/
+.local
+
+# Environment variables
+.env
+.env.*
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+.suo
+.ntvs*
+.njsproj
+.sln
+sw?
+
+# OS-specific files
+Thumbs.db
+ehthumbs.db
+.AppleDouble
+.LSOverride
+
+# Test coverage
+coverage/
