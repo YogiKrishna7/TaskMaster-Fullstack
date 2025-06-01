@@ -15,7 +15,12 @@ function Main({ term, tasks, onDelete, onUpdate }) {
           {filteredTasks
             .filter((task) => task.status === status)
             .map((task) => (
-              <TaskCard key={task.id} task={task} onDelete={onDelete} onUpdate={onUpdate}/>
+              <TaskCard
+                key={task.id}
+                task={task}
+                onDelete={onDelete}
+                onUpdate={onUpdate}
+              />
             ))}
         </div>
       ))}

@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS taskmaster;
 USE taskmaster;
 
 CREATE TABLE IF NOT EXISTS tasks (
-    task_id INT PRIMARY KEY,
+    task_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     task_name VARCHAR(255) NOT NULL,
     task_description TEXT,
     task_status VARCHAR(50) NOT NULL

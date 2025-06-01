@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
-import { taskData } from "./components/Connection";
+import { getTaskList } from "./components/Connection";
 import "./index.css";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      const data = await taskData;
+      const data = await getTaskList();
       setTasks(data);
     })();
   }, []);

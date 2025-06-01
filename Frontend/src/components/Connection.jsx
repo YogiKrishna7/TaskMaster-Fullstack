@@ -9,8 +9,8 @@ export const getTaskList = async () => {
   return objectData;
 };
 
-export const deleteTask = async (id) => {
-  const response = await fetch(`${url}/delete/${id}`, {
+export const deleteTask = async (taskId) => {
+  const response = await fetch(`${url}/delete/${taskId}`, {
     method: "DELETE",
   });
 
@@ -18,7 +18,7 @@ export const deleteTask = async (id) => {
     throw new Error("Failed to delete task");
   }
 
-  return id;
+  return taskId;
 };
 
 export const addTask = async (newTask) => {
@@ -51,12 +51,6 @@ export const updateTask = async (updatedTask) => {
     throw new Error("Failed to update task");
   }
 
-  try {
-    const data = await response.json();
-    return data;
-  } catch {
-    return updatedTask;
-  }
+  const data = await response.json();
+  return data;
 };
-
-export const taskData = getTaskList();
